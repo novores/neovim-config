@@ -181,6 +181,20 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+  T = {
+    name = "Translator",
+    t = {"<cmd>TranslateR<cr>", "TranslateR"}
+  },
+  v = {
+    name = "Vimtex",
+    c = {"<cmd>VimtexCompile<cr>", "VimtexCompile"},
+    d = {"<cmd>VimtexDocPackage<cr>", "VimtexDoc"},
+    e = {"<cmd>VimtexErrors<cr>", "VimtexErrors"},
+    i = {"<cmd>VimtexInfo<cr>", "VimtexInfo"},
+    s = {"<cmd>VimtexStatus<cr>", "VimtexStatus"},
+    t = {"<cmd>VimtexTocToggle<cr>", "VimtexTocToggle"},
+    C = {"<cmd>VimtexClean<cr>", "VimtexClean"},
+  }
 }
 
 which_key.setup(setup)

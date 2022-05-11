@@ -59,16 +59,28 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
   use "voldikss/vim-translator"
-  use "max397574/better-escape.nvim"
-
+  use "guns/xterm-color-table.vim"
+  use "tpope/vim-surround"
+  use "junegunn/goyo.vim"
+  use "dstein64/vim-startuptime"
+  use {
+    "max397574/better-escape.nvim",
+    config = function()
+      require("better_escape").setup()
+    end,
+  }
+  use "lervag/vimtex"
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
+  -- use "lunarvim/darkplus.nvim"
   use "morhetz/gruvbox"
-  use "arcticicestudio/nord-vim"
+  use "sainnhe/everforest"
+  -- use "arcticicestudio/nord-vim"
 
   -- cmp plugins
-  use "hrsh7th/nvim-cmp" -- The completion plugin
+  use { 'hrsh7th/nvim-cmp',
+    }
+  -- use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
