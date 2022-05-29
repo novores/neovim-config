@@ -41,6 +41,8 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
+  use "folke/zen-mode.nvim"
+  use "folke/twilight.nvim"
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
@@ -61,26 +63,17 @@ return packer.startup(function(use)
   use "voldikss/vim-translator"
   use "guns/xterm-color-table.vim"
   use "tpope/vim-surround"
-  use "junegunn/goyo.vim"
   use "dstein64/vim-startuptime"
-  use {
-    "max397574/better-escape.nvim",
-    config = function()
-      require("better_escape").setup()
-    end,
-  }
+  use "max397574/better-escape.nvim"
   use "lervag/vimtex"
+  
   -- Colorschemes
-  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  -- use "lunarvim/darkplus.nvim"
   use "morhetz/gruvbox"
   use "sainnhe/everforest"
   -- use "arcticicestudio/nord-vim"
 
   -- cmp plugins
-  use { 'hrsh7th/nvim-cmp',
-    }
-  -- use "hrsh7th/nvim-cmp" -- The completion plugin
+  use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions

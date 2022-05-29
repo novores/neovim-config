@@ -194,7 +194,8 @@ local mappings = {
     s = {"<cmd>VimtexStatus<cr>", "VimtexStatus"},
     t = {"<cmd>VimtexTocToggle<cr>", "VimtexTocToggle"},
     C = {"<cmd>VimtexClean<cr>", "VimtexClean"},
-  }
+  },
+  ["z"] = {"<cmd>ZenMode<cr>", "zenmode"},
 }
 
 which_key.setup(setup)

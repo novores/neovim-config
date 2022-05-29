@@ -1,5 +1,11 @@
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
+-- vim.cmd([[
+-- 	hi ActiveWindow guibg=#191919
+-- 	hi InactiveWindow guibg=#282828
+-- ]])
+--
+-- vim.o.winhighlight = "Normal:ActiveWindow,NormalNC:InactiveWindow"
 vim.g.nvim_tree_icons = {
   default = "",
   symlink = "",

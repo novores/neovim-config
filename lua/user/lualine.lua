@@ -52,7 +52,7 @@ local location = {
 local progress = function()
 	local current_line = vim.fn.line(".")
 	local total_lines = vim.fn.line("$")
-	local chars = { "__", "▁▁", "▂▂", "▃▃", "▄▄", "▅▅", "▆▆", "▇▇", "██" }
+	local chars = { "_", "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" }
 	local line_ratio = current_line / total_lines
 	local index = math.ceil(line_ratio * #chars)
 	return chars[index]
@@ -65,15 +65,15 @@ end
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "gruvbox-material",
+		theme = "auto",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
 		always_divide_middle = true,
 	},
 	sections = {
-		lualine_a = { branch,  },
-		lualine_b = { mode },
+		lualine_a = { mode },
+		lualine_b = { branch },
 		lualine_c = {diagnostics},
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_x = { diff, "encoding", filetype },
