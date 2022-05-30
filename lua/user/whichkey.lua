@@ -1,3 +1,6 @@
+vim.cmd [[
+hi WhichkeyFloat guibg=bg guifg=fg
+]]
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
   return

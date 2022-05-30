@@ -1,3 +1,8 @@
+vim.cmd [[
+hi BufferLineFill guibg=#1d2021 guifg=bg
+hi BufferLineBufferSelected guibg=bg guifg=fg
+hi BufferLineBuffer guibg=bg guifg=fg
+]]
 local status_ok, bufferline = pcall(require, "bufferline")
 if not status_ok then
   return

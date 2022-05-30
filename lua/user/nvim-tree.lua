@@ -1,10 +1,11 @@
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
--- vim.cmd([[
--- 	hi ActiveWindow guibg=#191919
--- 	hi InactiveWindow guibg=#282828
--- ]])
---
+vim.cmd([[
+hi EndOfBuffer guibg=bg guifg=bg
+hi NvimTreeWinSeparator guibg=#1d2021 guifg=#1d2021
+hi NvimTreeNormal guibg=#1d2021 guifg=none
+hi NvimTreeEndofBuffer guibg=#1d2021 guifg=bg
+]])
 -- vim.o.winhighlight = "Normal:ActiveWindow,NormalNC:InactiveWindow"
 vim.g.nvim_tree_icons = {
   default = "",
@@ -49,6 +50,26 @@ nvim_tree.setup {
       },
     },
   },
+  -- nvim_tree_icons = {
+  --   default = "",
+  --   symlink = "",
+  --   folder = {
+  --     default = "",
+  --     open = "",
+  --     empty = "",
+  --     empty_open = "",
+  --     symlink = "",
+  --   },
+  --   git = {
+  --     unstaged = "",
+  --     staged = "S",
+  --     unmerged = "",
+  --     renamed = "➜",
+  --     deleted = "",
+  --     untracked = "U",
+  --     ignored = "◌",
+  --   },
+  -- },
   disable_netrw = true,
   hijack_netrw = true,
   open_on_setup = false,
