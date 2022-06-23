@@ -7,26 +7,26 @@ hi NvimTreeNormal guibg=#1d2021 guifg=none
 hi NvimTreeEndofBuffer guibg=#1d2021 guifg=bg
 ]])
 -- vim.o.winhighlight = "Normal:ActiveWindow,NormalNC:InactiveWindow"
-vim.g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
-  git = {
-    unstaged = "",
-    staged = "S",
-    unmerged = "",
-    renamed = "➜",
-    deleted = "",
-    untracked = "U",
-    ignored = "◌",
-  },
-  folder = {
-    default = "",
-    open = "",
-    empty = "",
-    empty_open = "",
-    symlink = "",
-  },
-}
+-- vim.g.nvim_tree_icons = {
+--   default = "",
+--   symlink = "",
+--   git = {
+--     unstaged = "",
+--     staged = "S",
+--     unmerged = "",
+--     renamed = "➜",
+--     deleted = "",
+--     untracked = "U",
+--     ignored = "◌",
+--   },
+--   folder = {
+--     default = "",
+--     open = "",
+--     empty = "",
+--     empty_open = "",
+--     symlink = "",
+--   },
+-- }
 
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
@@ -50,26 +50,30 @@ nvim_tree.setup {
       },
     },
   },
-  -- nvim_tree_icons = {
-  --   default = "",
-  --   symlink = "",
-  --   folder = {
-  --     default = "",
-  --     open = "",
-  --     empty = "",
-  --     empty_open = "",
-  --     symlink = "",
-  --   },
-  --   git = {
-  --     unstaged = "",
-  --     staged = "S",
-  --     unmerged = "",
-  --     renamed = "➜",
-  --     deleted = "",
-  --     untracked = "U",
-  --     ignored = "◌",
-  --   },
-  -- },
+  renderer = {
+    icons = {
+      glyphs = {
+        default = "",
+        symlink = "",
+        folder = {
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+        },
+        git = {
+          unstaged = "",
+          staged = "S",
+          unmerged = "",
+          renamed = "➜",
+          deleted = "",
+          untracked = "U",
+          ignored = "◌",
+        },
+      },
+    },
+  },
   disable_netrw = true,
   hijack_netrw = true,
   open_on_setup = false,
