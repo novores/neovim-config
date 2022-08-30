@@ -8,6 +8,7 @@ dashboard.section.header.val = {
 [[┏┓╻┏━╸┏━┓╻ ╻╻┏┳┓]],
 [[┃┗┫┣╸ ┃ ┃┃┏┛┃┃┃┃]],
 [[╹ ╹┗━╸┗━┛┗┛ ╹╹ ╹]],
+[[   by Novores   ]]
 }
 dashboard.section.buttons.val = {
 	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),

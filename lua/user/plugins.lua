@@ -43,6 +43,7 @@ return packer.startup(function(use)
   -- My plugins here
   use "folke/zen-mode.nvim"
   use "folke/twilight.nvim"
+  use "folke/which-key.nvim"
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
@@ -59,7 +60,6 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  use "folke/which-key.nvim"
   use "voldikss/vim-translator"
   use "guns/xterm-color-table.vim"
   use "tpope/vim-surround"
@@ -70,6 +70,7 @@ return packer.startup(function(use)
   -- Colorschemes
   use "morhetz/gruvbox"
   use "sainnhe/everforest"
+  use "sainnhe/gruvbox-material"
   -- use "arcticicestudio/nord-vim"
 
   -- cmp plugins
