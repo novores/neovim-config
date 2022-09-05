@@ -1,14 +1,15 @@
 # Neovim from scratch
-
-Each video will be associated with a branch so checkout the one you are interested in, you can follow along with this [playlist](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ).
+this is my neovim setup based on repository template [Neovim-from-scratch](https://github.com/LunarVim/Neovim-from-scratch.git)  
+there are some additions and improvements to the config, especially the configuration that has been declared *deprecated* by the related plugin.
 
 ## Try out this config
 
 Make sure to remove or move your current `nvim` directory
 
-**IMPORTANT** Requires [Neovim v0.6.0](https://github.com/neovim/neovim/releases/tag/v0.6.0) or [Nightly](https://github.com/neovim/neovim/releases/tag/nightly). 
+**IMPORTANT** Requires [Neovim v0.7.0](https://github.com/neovim/neovim/releases/tag/v0.7.0) or [Nightly](https://github.com/neovim/neovim/releases/tag/nightly). 
+
 ```
-git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
+git clone https://github.com/novores/neovim-config ~/.config/nvim
 ```
 
 Run `nvim` and wait for the plugins to be installed 
@@ -41,6 +42,12 @@ First we'll fix copy/paste
 
   ```
   sudo pacman -S xsel
+  ```
+
+- On Void Linux
+  
+  ```
+  sudo xbps-install -S xsel
   ```
 
 Next we need to install python support (node is optional)
