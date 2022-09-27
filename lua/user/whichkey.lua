@@ -1,5 +1,6 @@
 vim.cmd [[
-hi WhichkeyFloat guibg=bg guifg=fg
+hi WhichkeyFloat guibg=#1d2021 guifg=fg
+hi WhichkeyBorder guibg=bg guifg=bg
 ]]
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
@@ -46,7 +47,7 @@ local setup = {
     scroll_up = "<c-u>", -- binding to scroll up inside the popup
   },
   window = {
-    border = "rounded", -- none, single, double, shadow
+    border = "none", -- none, single, double, shadow
     position = "bottom", -- bottom, top
     margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
     padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
@@ -184,19 +185,17 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
-  T = {
-    name = "Translator",
-    t = {"<cmd>TranslateR<cr>", "TranslateR"}
-  },
   v = {
     name = "Vimtex",
+    C = {"<cmd>VimtexClean<cr>", "VimtexClean"},
     c = {"<cmd>VimtexCompile<cr>", "VimtexCompile"},
     d = {"<cmd>VimtexDocPackage<cr>", "VimtexDoc"},
     e = {"<cmd>VimtexErrors<cr>", "VimtexErrors"},
     i = {"<cmd>VimtexInfo<cr>", "VimtexInfo"},
+    l = {"<cmd>VimtexLog<cr>", "VimtexLog"},
     s = {"<cmd>VimtexStatus<cr>", "VimtexStatus"},
     t = {"<cmd>VimtexTocToggle<cr>", "VimtexTocToggle"},
-    C = {"<cmd>VimtexClean<cr>", "VimtexClean"},
+    v = {"<cmd>VimtexView<cr>", "VimtexView"},
   },
   ["z"] = {"<cmd>ZenMode<cr>", "zenmode"},
 }

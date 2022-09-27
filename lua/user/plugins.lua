@@ -42,7 +42,7 @@ packer.init {
 return packer.startup(function(use)
   -- My plugins here
   use "folke/zen-mode.nvim"
-  use "folke/twilight.nvim"
+  use "junegunn/limelight.vim"
   use "folke/which-key.nvim"
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
@@ -66,10 +66,8 @@ return packer.startup(function(use)
   use "dstein64/vim-startuptime"
   use "max397574/better-escape.nvim"
   use "lervag/vimtex"
-  
+
   -- Colorschemes
-  use "morhetz/gruvbox"
-  use "sainnhe/everforest"
   use "sainnhe/gruvbox-material"
   -- use "arcticicestudio/nord-vim"
 
