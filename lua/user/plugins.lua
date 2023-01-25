@@ -66,6 +66,7 @@ return packer.startup(function(use)
   use "dstein64/vim-startuptime"
   use "max397574/better-escape.nvim"
   use "lervag/vimtex"
+  use "phelipetls/vim-hugo"
 
   -- Colorschemes
   use "sainnhe/gruvbox-material"
