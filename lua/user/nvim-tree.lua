@@ -2,9 +2,10 @@
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 vim.cmd([[
 hi EndOfBuffer guibg=bg guifg=bg
-hi NvimTreeWinSeparator guibg=#1d2021 guifg=#1d2021
+hi NvimTreeWinSeparator guibg=#1d2021 guifg=#1d2021 
 hi NvimTreeNormal guibg=#1d2021 guifg=none
-hi NvimTreeEndofBuffer guibg=#1d2021 guifg=bg
+hi NvimTreeEndofBuffer guibg=#1d2021 guifg=#1d2021
+hi NvimTreeLineNr guibg=#1d2021 guifg=#1d2021
 ]])
 -- vim.o.winhighlight = "Normal:ActiveWindow,NormalNC:InactiveWindow"
 -- vim.g.nvim_tree_icons = {
@@ -76,12 +77,6 @@ nvim_tree.setup {
   },
   disable_netrw = true,
   hijack_netrw = true,
-  open_on_setup = false,
-  ignore_ft_on_setup = {
-    "startify",
-    "dashboard",
-    "alpha",
-  },
   -- auto_close = true, --deprecated
   open_on_tab = false,
   hijack_cursor = false,
