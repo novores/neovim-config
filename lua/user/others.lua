@@ -10,7 +10,7 @@ if not status_ok then
   return
 end
 
-local setup = {
+zenmode.setup = {
   on_open = function()
    vim.cmd('Limelight')
   end,
@@ -18,5 +18,3 @@ local setup = {
    vim.cmd('Limelight!')
   end,
 }
-
-zenmode.setup(setup)
